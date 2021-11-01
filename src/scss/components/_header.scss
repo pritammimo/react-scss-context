@@ -19,13 +19,19 @@
            color:variables.$white;
            text-transform: uppercase;
            font-weight: 900;
-           font-size: 4rem;
-           line-height: 2.7rem;
+           font-size: 4.2rem;
+           line-height: 2.8rem;
+           @include mixins.animation(heading,1s,ease-in,-8rem,0)
          }
          &__p{
-           margin-top:.7rem;
+           margin-top:.8rem;
            color:variables.$white;
            font-size: 1.5rem;
+           @include mixins.animation(subHeading,1s,ease-out,-10rem,0)
+         }
+         &__link{
+           margin-top: .8rem;
+           @include mixins.animation(headerButton,1s,ease-out,8rem,0)
          }
        }
       }
