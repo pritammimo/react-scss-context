@@ -9,5 +9,6 @@
         height:auto;
         padding:2rem;
         font-size:1.4rem;
+        @include abstracts.animation(modelAnimate,.5s,linear,-10rem,0)
     }
 }

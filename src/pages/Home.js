@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Model from "../components/Model";
 import ModelContext from "../context/ModelContext";
 export const Home = () => {
-    const { state:ss, dispatch } = useContext(ModelContext);
+    const {  dispatch } = useContext(ModelContext);
     const [state] = useState({
       heading: "we are travel friends",
       paragraph: "Come and Join us we travel the most beauutiful places in the world",
@@ -11,7 +11,9 @@ export const Home = () => {
     return (
       <div>
         <Header heading={state.heading} paragraph={state.paragraph}>
-          <button className='btn-default'>Get Started</button>
+          <button className='btn-default' onClick={()=>dispatch({
+            type:'OPEN_MODEL'
+          })}>Get Started</button>
         </Header>
         <Model/>
       </div>
