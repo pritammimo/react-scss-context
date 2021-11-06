@@ -3,7 +3,8 @@ import ModelContext from "../ModelContext";
 import ModelReducer from "../reducers/ModelReducer";
 const ModelProvider=(props)=>{
 const [state,dispatch]=useReducer(ModelReducer
-    ,{modelStatus:false})
+    ,{modelStatus:false,
+    current:''})
  console.log("check",state)
  return (
      <ModelContext.Provider 

@@ -1,18 +1,12 @@
 import React from 'react'
-const Register = () => {
+
+const Login = () => {
     return (
       <form>
         <div className="model__heading">
-          <h1>Create new Account</h1>
+          <h1>Login</h1>
         </div>
-        <div className="group">
-          <input
-            type="text"
-            name=""
-            className="group__control"
-            placeholder="Enter name"
-          />
-        </div>
+       
         <div className="group">
           <input
             type="email"
@@ -26,7 +20,7 @@ const Register = () => {
             type="password"
             name=""
             className="group__control"
-            placeholder="Create Password"
+            placeholder="Enter Password"
           />
         </div>
         <div className="group flex space-between y-center">
@@ -34,12 +28,12 @@ const Register = () => {
             type="submit"
             name=""
             className="btn-dark"
-            placeholder="Register"
+            placeholder="Login"
           />
-          <span>Already have an account?</span>
+          <span>Create new account?</span>
         </div>
       </form>
     );
 }
 
-export default Register
+export default Login
