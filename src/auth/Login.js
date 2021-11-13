@@ -1,8 +1,18 @@
-import React from 'react'
-
-const Login = () => {
+import React,{useContext,useState} from 'react'
+import ModelContext from "../context/ModelContext";
+import { OPEN_MODEL } from "../context/types/ModelTypes";
+const Login = (props) => {
+  const {dispatch}=useContext(ModelContext)
+  const [state, setstate] = useState({
+    email:'',
+    password:'',
+  })
+  const loginForm=(e)=>{
+    e.preventDefault();
+    console.log(state)
+   }
     return (
-      <form>
+      <form onSubmit={loginForm}>
         <div className="model__heading">
           <h1>Login</h1>
         </div>
@@ -13,6 +23,8 @@ const Login = () => {
             name=""
             className="group__control"
             placeholder="Enter email"
+            onChange={(e)=>setstate({...state,email:e.target.value})}
+            value={state.email}
           />
         </div>
         <div className="group">
@@ -21,6 +33,8 @@ const Login = () => {
             name=""
             className="group__control"
             placeholder="Enter Password"
+            onChange={(e)=>setstate({...state,password:e.target.value})}
+            value={state.password}
           />
         </div>
         <div className="group flex space-between y-center">
@@ -30,7 +44,7 @@ const Login = () => {
             className="btn-dark"
             placeholder="Login"
           />
-          <span>Create new account?</span>
+          <span onClick={()=>dispatch({type:OPEN_MODEL,payload:props.currentModel})}>Create new account?</span>
         </div>
       </form>
     );

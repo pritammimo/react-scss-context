@@ -12,6 +12,7 @@ export const Home = () => {
       paragraph: "Come and Join us we travel the most beauutiful places in the world",
     });
     const [registerModel]=useState('registerModel');
+    const [loginModel]=useState('loginModel');
     return (
       <div>
         <Header heading={state.heading} paragraph={state.paragraph}>
@@ -27,10 +28,10 @@ export const Home = () => {
           </button>
         </Header>
         <Model current={registerModel}>
-          <Register />
+          <Register currentModel={loginModel}/>
         </Model>
-        <Model>
-          <Login />
+        <Model current={loginModel}>
+          <Login currentModel={registerModel} />
         </Model>
       </div>
     );
