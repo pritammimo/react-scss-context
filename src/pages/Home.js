@@ -1,6 +1,7 @@
 import React,{useState,useContext} from 'react'
 import Header from '../components/Header';
 import Model from "../components/Model";
+import { Helmet } from 'react-helmet-async';
 import ModelContext from "../context/ModelContext";
 import { OPEN_MODEL } from "../context/types/ModelTypes";
 import Register from '../auth/Register';
@@ -15,6 +16,11 @@ export const Home = () => {
     const [loginModel]=useState('loginModel');
     return (
       <div>
+       <Helmet>
+         <title>Travel Friends</title>
+         <meta name="description" content="Travel to the world with travel friends"/>
+         <meta name="keywords" content="travel,travel tours,airline"/>
+       </Helmet>
         <Header heading={state.heading} paragraph={state.paragraph}>
           <button
             className="btn-default"
