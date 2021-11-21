@@ -14,6 +14,7 @@ export const Home = () => {
     });
     const [registerModel]=useState('registerModel');
     const [loginModel]=useState('loginModel');
+
     return (
       <div>
        <Helmet>
