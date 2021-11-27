@@ -6,6 +6,7 @@ import ModelContext from "../context/ModelContext";
 import { OPEN_MODEL } from "../context/types/ModelTypes";
 import Register from '../auth/Register';
 import Login from "../auth/Login";
+import Destination from '../components/Destination';
 export const Home = () => {
     const {  dispatch } = useContext(ModelContext);
     const [state] = useState({
@@ -40,6 +41,7 @@ export const Home = () => {
         <Model current={loginModel}>
           <Login currentModel={registerModel} />
         </Model>
+          <Destination/>
       </div>
     );
 }
