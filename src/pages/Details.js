@@ -1,16 +1,18 @@
 import { useParams } from "react-router-dom";
 import { useContext,useEffect } from "react";
 import DestinationContext from "../context/DestinationContext";
-import { DETAILS } from "../context/types/DestinationTypes";
+import { DETAILS,CITY } from "../context/types/DestinationTypes";
 import Header from "../components/Header";
+import DestinationInfo from "../components/Destinationinfo";
 import { Helmet } from 'react-helmet-async';
 const Details=()=>{
     const {id}=useParams();
     const {destinationsData,dispatch}=useContext(DestinationContext)
-    console.log("destinationsData",destinationsData.details)
+    console.log("destinationsData",destinationsData.filteredCities)
     const {details}=destinationsData
     useEffect(() => {
       dispatch({type:DETAILS,payload:id})
+      dispatch({type:CITY,payload:id})
     }, [id])
     return (
        <>
@@ -20,6 +22,7 @@ const Details=()=>{
            </title>
        </Helmet>
            <Header heading={details.name} image={details.bigImage}></Header>
+           <DestinationInfo details={details}/>
        </>
     )
 }
