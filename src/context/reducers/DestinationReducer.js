@@ -1,4 +1,4 @@
-import { DETAILS,CITY } from '../types/DestinationTypes';
+import { DETAILS,CITIES } from '../types/DestinationTypes';
 const DestinationsReducer = (state, action) => {
 	const { type, payload } = action;
 	console.log(typeof payload);
@@ -11,7 +11,7 @@ const DestinationsReducer = (state, action) => {
 			details: destination,
 		};
 	}
-     else if (type === CITY) {
+     else if (type === CITIES) {
 		const filtered = state.cities.filter(
 			(city) => parseInt(city.destinationId) === parseInt(payload)
 		);

@@ -1,2 +1,2 @@
 export const DETAILS='DETAILS'
-export const CITY='CITY'
+export const CITIES='CITIES'
