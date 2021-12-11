@@ -7,6 +7,7 @@ import { OPEN_MODEL } from "../context/types/ModelTypes";
 import Register from '../auth/Register';
 import Login from "../auth/Login";
 import Destination from '../components/Destination';
+import Services from '../components/services/Services';
 export const Home = () => {
     const {  dispatch } = useContext(ModelContext);
     const [state] = useState({
@@ -44,6 +45,7 @@ export const Home = () => {
           <Login currentModel={registerModel} />
         </Model>
           <Destination/>
+          <Services/>
       </div>
     );
 }
