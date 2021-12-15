@@ -8,6 +8,7 @@ import Register from '../auth/Register';
 import Login from "../auth/Login";
 import Destination from '../components/Destination';
 import Services from '../components/services/Services';
+import Reviews from "../components/reviews/Reviews";
 export const Home = () => {
     const {  dispatch } = useContext(ModelContext);
     const [state] = useState({
@@ -46,6 +47,7 @@ export const Home = () => {
         </Model>
           <Destination/>
           <Services/>
+          <Reviews/>
       </div>
     );
 }
