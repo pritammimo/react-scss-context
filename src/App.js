@@ -10,13 +10,14 @@ import Nav from "./components/Nav";
 import Toggle from "./components/Toggle";
 import DestinationProvider from "./context/providers/DestinationProvider";
 import Details from "./pages/Details";
-
+import SharedProvider from "./context/providers/SharedProvider";
 function App() {
   return (
     <Router>
         <ModelProvider>
         <NavProvider>
         <DestinationProvider>
+        <SharedProvider>
         <Toggle/>
         <Nav />
         <HelmetProvider>
@@ -27,6 +28,7 @@ function App() {
           <Route component={NotFound} />
         </Switch>
         </HelmetProvider>
+        </SharedProvider>
         </DestinationProvider>
         </NavProvider>
         </ModelProvider>
