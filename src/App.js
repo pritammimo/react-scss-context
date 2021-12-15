@@ -11,11 +11,13 @@ import Toggle from "./components/Toggle";
 import DestinationProvider from "./context/providers/DestinationProvider";
 import Details from "./pages/Details";
 import SharedProvider from "./context/providers/SharedProvider";
+import GalleryProvider from "./context/providers/GalleryProvider";
 function App() {
   return (
     <Router>
         <ModelProvider>
         <NavProvider>
+        <GalleryProvider>
         <DestinationProvider>
         <SharedProvider>
         <Toggle/>
@@ -30,6 +32,7 @@ function App() {
         </HelmetProvider>
         </SharedProvider>
         </DestinationProvider>
+        </GalleryProvider>
         </NavProvider>
         </ModelProvider>
     </Router>
