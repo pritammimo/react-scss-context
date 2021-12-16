@@ -1,13 +1,16 @@
 import React,{useContext, useState} from 'react'
 import GalleryContext from "../../context/GalleryContext";
 import GalleryImage from './GalleryImage';
+import LightBox from "./LightBox";
 const GalleryComponent = () => {
-    const {galleryStore:{gallery},dispatch}=useContext(GalleryContext)
+    const {galleryStore:{gallery,lightBoxStatus},dispatch}=useContext(GalleryContext)
     const [heading]=useState('Travelers captured Images')
     return (
+      <>
+      {lightBoxStatus ? <LightBox/>:""}
         <div className='gallery'>
          <div className='container'>
-            <h2 className='heading'>
+            <h2 className='heading mb-55'>
                 {heading}
             </h2>
             <div className='row'>
@@ -17,6 +20,7 @@ const GalleryComponent = () => {
             </div>
          </div>
         </div>
+        </>
     )
 }
 

@@ -4,7 +4,9 @@ import GalleryReducer from "../reducers/GalleryReducer";
 import gallery from "../../data/gallery";
 const GalleryProvider=(props)=>{
   const [galleryStore,dispatch]=useReducer(GalleryReducer,{
-      gallery
+      gallery,
+      lightBoxStatus:false,
+      currentLightBox:{}
   });
   return(
       <GalleryContext.Provider value={{galleryStore,dispatch}}>
