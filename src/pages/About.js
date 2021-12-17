@@ -1,13 +1,25 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { Helmet } from 'react-helmet-async';
+import PageContainer from "../components/pages-parts/PageContainer";
+import AboutImage from "../components/pages-parts/AboutImage";
 export const About = () => {
+    const [state]=useState({
+      heading:'about us',
+      pageHeading:'world best travel agency company since 2005',
+      message:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+    })
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     return (
         <>
         <Helmet>
            <title>About page</title>
            <meta name="description" content="travel friends about page"/>
         </Helmet>
-        <h1>About Page</h1>
+        <PageContainer data={state} >
+            <AboutImage/>
+        </PageContainer>
         </>
     )
 }

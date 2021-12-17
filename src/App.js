@@ -12,6 +12,7 @@ import DestinationProvider from "./context/providers/DestinationProvider";
 import Details from "./pages/Details";
 import SharedProvider from "./context/providers/SharedProvider";
 import GalleryProvider from "./context/providers/GalleryProvider";
+import Contact from "./pages/Contact";
 function App() {
   return (
     <Router>
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/details/:id" component={Details} />
+          <Route exact path="/contact" component={Contact}/>
           <Route component={NotFound} />
         </Switch>
         </HelmetProvider>

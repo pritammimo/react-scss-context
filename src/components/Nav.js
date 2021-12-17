@@ -21,6 +21,11 @@ import NavContext from "../context/NavContext";
                   About
                 </Link>
              </li>
+             <li>
+                <Link to="/contact">
+                  Contact
+                </Link>
+             </li>
             </div>  
         </div>
         </>
