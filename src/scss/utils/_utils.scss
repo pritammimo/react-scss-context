@@ -79,6 +79,9 @@
     color: transparent;
     transform: rotate(-2deg);
     text-transform:capitalize;
+    @include responsive(small){
+        font-size: 1.8rem;
+      }
 }
 .animation{
     transform: translateY(-10rem) scale(0);
