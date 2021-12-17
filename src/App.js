@@ -13,6 +13,7 @@ import Details from "./pages/Details";
 import SharedProvider from "./context/providers/SharedProvider";
 import GalleryProvider from "./context/providers/GalleryProvider";
 import Contact from "./pages/Contact";
+import AnimationsProvider from "./context/providers/AnimationsProvider";
 function App() {
   return (
     <Router>
@@ -21,6 +22,7 @@ function App() {
         <GalleryProvider>
         <DestinationProvider>
         <SharedProvider>
+        <AnimationsProvider>
         <Toggle/>
         <Nav />
         <HelmetProvider>
@@ -32,6 +34,7 @@ function App() {
           <Route component={NotFound} />
         </Switch>
         </HelmetProvider>
+        </AnimationsProvider>
         </SharedProvider>
         </DestinationProvider>
         </GalleryProvider>

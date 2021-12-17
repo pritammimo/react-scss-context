@@ -8,10 +8,10 @@ const Footerintro = () => {
     })
     return (
         <div className="footer__intro">
-          <div className='footer__intro__img'>
+          <div className='footer__intro__img animation'>
            <LazyLoadImage src={state.logo} alt='footer logo'/>
           </div>
-             <p className='footer__intro_msg'>
+             <p className='footer__intro_msg animation'>
               {state.intro}
              </p>
         </div>

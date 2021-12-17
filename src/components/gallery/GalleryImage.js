@@ -10,7 +10,7 @@ const GalleryImage = ({glr}) => {
     }
     return (
         <div className='col-3'>
-        <div className='gallery__image'>
+        <div className='gallery__image animation'>
          <LazyLoadImage src={glr.image} alt="" onClick={()=>{
              openLightBox(glr)
          }}/>

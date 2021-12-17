@@ -10,7 +10,7 @@ const GalleryComponent = () => {
       {lightBoxStatus ? <LightBox/>:""}
         <div className='gallery'>
          <div className='container'>
-            <h2 className='heading mb-55'>
+            <h2 className='heading mb-55 headingAnimation'>
                 {heading}
             </h2>
             <div className='row'>
